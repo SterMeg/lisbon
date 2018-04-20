@@ -17,3 +17,10 @@ $blockquoteSm: #bfb9f6;
 $footerBgTop: #1b1b1b;
 $footerBgBottom: #100f0f;
 $footerSocial: #2f2f2f;
+
+
+// Mix-ins
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}

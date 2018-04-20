@@ -3,3 +3,64 @@
 @import "typography";
 @import "components/header";
 @import "components/footer";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.icon {
+    border-radius: 50%;
+    border: none;
+}
+
+.button {
+    background: $pink;
+    border: none;
+    color: #fff;   
+    font-family: "Raleway", sans-serif;
+    @include fontSize(15);
+    padding: 20px 60px;
+    text-transform: uppercase;
+    &--secondary {
+        background: $purple;
+    }
+}
+
+.section__inner--flex {
+    display: flex;
+}
+.counter__inner {
+    display: flex;
+}
+
+.section {
+    padding: 150px 0;
+    &--secondary-color {
+        background: $backgroundShaded;
+    }
+}

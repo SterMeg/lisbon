@@ -17,29 +17,29 @@
             <nav class="nav">
                 <img src="images/logo.png" alt="Lisbon logo" class="nav__logo">
                 <ul class="nav__list">
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Home</a>
+                    <li>
+                        <a href="" class="nav__list__link">Home</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">About us</a>
+                    <li>
+                        <a href="" class="nav__list__link">About us</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Speakers</a>
+                    <li>
+                        <a href="" class="nav__list__link">Speakers</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Pages</a>
+                    <li>
+                        <a href="" class="nav__list__link">Pages</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Sponsors</a>
+                    <li>
+                        <a href="" class="nav__list__link">Sponsors</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Blog</a>
+                    <li>
+                        <a href="" class="nav__list__link">Blog</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Venues</a>
+                    <li>
+                        <a href="" class="nav__list__link">Venues</a>
                     </li>
-                    <li class="nav__list__item">
-                        <a href="" class="nav__list__item__link">Contact us</a>
+                    <li>
+                        <a href="" class="nav__list__link">Contact us</a>
                     </li>    
                 </ul>
                 <button class="icon nav__icon"><i class="fas fa-search"></i></button>
@@ -56,7 +56,7 @@
     <!-- MAIN START -->
     <main class="main">
         <!-- Tickets Section -->
-        <section class="section">
+        <section class="section section--secondary-color">
             <div class="wrapper">
             <!-- Conference dates -->
                 <div class="section__inner">
@@ -68,7 +68,7 @@
                     </h2>
                 </div>
                 <!-- Countdown -->
-                <div class="section__inner">
+                <div class="section__inner section__inner--flex">
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
                             <p class="counter__card">1</p>
@@ -107,7 +107,7 @@
             </div><!-- /.wrapper -->
         </section>
         <!-- About Section -->
-        <section class="section section--full">
+        <section class="section">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 class="header-2">About this event</h2>
@@ -141,101 +141,370 @@
                 </div><!-- /.section__inner -->
             </div><!-- /.wrapper -->
         </section>
-        <section class="section section--short">
-            <div class="section__inner section__inner--short">
-                <h2 class="header-2">Join our event</h2>
-                <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
-                <input type="email" class="input" placeholder="Your Email">
-                <input type="submit" class="button" value="Subscribe">
+        <!-- Join Section -->
+        <section class="section section--short--dark">
+            <div class="wrapper">
+                <div class="section__inner section__inner--short">
+                    <h2 class="header-2">Join our event</h2>
+                    <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
+                    <input type="email" class="input" placeholder="Your Email">
+                    <input type="submit" class="button" value="Subscribe">
+                </div>
             </div>
         </section>
+        <!-- Event Speakers Section -->
         <section class="section section--full">
-            <header class="secondary-header">
-                <h2 class="header-2">Our event speakers</h2>
-                <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
-            </header>
-            <div class="gallery">
-                <figure class="card gallery__card">
-                    <img src="images/speaker-1.png" alt="" class="img">
-                    <figcaption class="gallery__text">
-                        <h4 class="header-4">Ashley Warner</h4>
-                        <p class="paragraph">CEO, Hotem Co</p>
-                    </figcaption>
+            <div class="wrapper">
+                <header class="secondary-header">
+                    <h2 class="header-2">Our event speakers</h2>
+                    <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
+                </header>
+                <div class="gallery">
+                    <figure class="card gallery__card">
+                        <img src="images/speaker-1.png" alt="" class="img">
+                        <figcaption class="gallery__text">
+                            <h4 class="header-4">Ashley Warner</h4>
+                            <p class="paragraph">CEO, Hotem Co</p>
+                        </figcaption>
+                        <div class="gallery__container">
+                            <a href="" class="icon gallery__icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="icon gallery__icon"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="icon gallery__icon"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </figure>
+                    <figure class="card gallery__card">
+                        <img src="images/speaker-2.png" alt="" class="img">
+                        <figcaption class="gallery__text">
+                            <h4 class="header-4">Seth Rollins</h4>
+                            <p class="paragraph">GM, The boxtrap</p>
+                        </figcaption>
+                        <div class="gallery__container">
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </figure>
+                    <figure class="card gallery__card">
+                        <img src="images/speaker-1.png" alt="" class="img">
+                        <figcaption class="gallery__text">
+                            <h4 class="header-4">Ashley Warner</h4>
+                            <p class="paragraph">CEO, Hotem Co</p>
+                        </figcaption>
+                        <div class="card__container">
+                            <a href="" class="icon gallery__icon"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="icon gallery__icon"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="icon gallery__icon"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </figure>
+                    <figure class="card gallery__card">
+                        <img src="images/speaker-3.png" alt="" class="img">
+                        <figcaption class="gallery__text">
+                            <h4 class="header-4">Darcy Owens</h4>
+                            <p class="paragraph">Producer, CSI Cyber</p>
+                        </figcaption>
+                        <div class="card__container">
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </figure>
+                    <figure class="card gallery__card">
+                        <img src="images/speaker-4.png" alt="" class="img">
+                        <figcaption class="gallery__text">
+                            <h4 class="header-4">Adam Rose</h4>
+                            <p class="paragraph">CCO, Bittorent</p>
+                        </figcaption>
+                        <div class="card__container">
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="icon gallery__icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </figure>
                     <div class="gallery__container">
-                        <a href="" class="icon gallery__icon"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="" class="icon gallery__icon"><i class="fab fa-twitter"></i></a>
-                        <a href="" class="icon gallery__icon"><i class="fab fa-facebook-f"></i></a>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
-                </figure>
+                </div><!-- /.gallery -->
+            </div><!-- /.wrapper -->
+        </section>
+        <!-- Pricing Section -->
+        <section class="section section--full">
+            <div class="wrapper">
+                <header class="secondary-header">
+                    <h2 class="header-2">Our pricing</h2>
+                    <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
+                </header>
+                <div class="section__card-container">
+                    <div class="card">
+                        <h4 class="header-4">Basic Plan</h4>
+                        <p class="paragraph">Standard pricing plan</p>
+                        <p class="paragraph"><span class="paragraph__large">35</span> / monthly</p>
+                        <ul class="card__list">
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Clients support 3 event</p>   
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Regular seat &amp; accomodation</p>
+                            </li>   
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free cafe &amp; lunch</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free entrance materials</p>
+                            </li>                    
+                        </ul>
+                        <a href="#" class="button">See details</a>
+                    </div>
+                    <div class="card">
+                        <h4 class="header-4">Optimal Plan</h4>
+                        <p class="paragraph">Standard pricing plan</p>
+                        <p class="paragraph">
+                            <span class="paragraph__large">60</span> / monthly</p>
+                        <ul class="card__list">
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Clients support 3 event</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Regular seat &amp; accomodation</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free cafe &amp; lunch</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free entrance materials</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="button">See details</a>
+                    </div>
+                    <div class="card">
+                        <h4 class="header-4">Premium Plan</h4>
+                        <p class="paragraph">Standard pricing plan</p>
+                        <p class="paragraph">
+                            <span class="paragraph__large">90</span> / monthly</p>
+                        <ul class="card__list">
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Clients support 3 event</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Regular seat &amp; accomodation</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free cafe &amp; lunch</p>
+                            </li>
+                            <li class="card__list__list-item">
+                                <p class="paragraph">Free entrance materials</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="button">See details</a>
+                    </div>
+                </div>
+            </div><!-- /.wrapper -->
+        </section>
+        <!-- Event Schedule Section -->
+        <section class="section section--full">
+            <div class="wrapper">
+                <header class="secondary-header">
+                    <h2 class="header-2">Event schedule</h2>
+                    <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
+                </header>
+                <div class="section__inner">
+                    <ul class="list">
+                        <li class="list__list-item">
+                            <p class="paragraph">April 21</p>
+                            <p class="paragraph">First Day</p>
+                        </li>
+                        <li class="list__list-item">
+                            <p class="paragraph">April 22</p>
+                            <p class="paragraph">Second Day</p>
+                        </li>
+                        <li class="list__list-item">
+                            <p class="paragraph">April 24</p>
+                            <p class="paragraph">Third Day</p>
+                        </li>
+                        <li class="list__list-item">
+                            <p class="paragraph">April 25</p>
+                            <p class="paragraph">Fourth Day</p>
+                        </li>
+                    </ul>
+                    <div class="articles">
+                        <article class="article">
+                            <img src="images/schedule-1.png" alt="" class="img">
+                            <div class="article__container">
+                                <h5 class="header-5"><span class="bold">David Johnson</span> 10AM - 12PM</h5>
+                                <h4 class="header-4">Interfaces Holisticly predominate extensible testing procedures</h4>
+                                <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
+                            </div>
+                        </article>
+                        <article class="article">
+                            <img src="images/schedule-2.png" alt="" class="img">
+                            <div class="article__container">
+                                <h5 class="header-5">
+                                    <span class="bold">Seth Rollis</span> 11AM - 2:30PM</h5>
+                                <h4 class="header-4">Welcome Speech of UX Conf 2018</h4>
+                                <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
+                            </div>
+                        </article>
+                        <article class="article">
+                            <img src="images/schedule-3.png" alt="" class="img">
+                            <div class="article__container">
+                                <h5 class="header-5">
+                                    <span class="bold">Adam Rose</span> 10AM - 2:00PM</h5>
+                                <h4 class="header-4">Open your business around the world</h4>
+                                <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
+                            </div>
+                        </article>       
+                    </div><!-- /.articles -->
+                </div>
+            </div><!-- /.wrapper -->
+        </section>
+        <!-- Quote section -->
+        <section class="section section--offset">
+            <div class="wrapper">
+                <ul class="list--sidebar">
+                    <li class="list__item"><img src="images/quote-1.png" alt="" class="img--round"></li>
+                    <li class="list__item"><img src="images/quote-2.png" alt="" class="img--round"></li>
+                    <li class="list__item"><img src="images/quote-3.png" alt="" class="img--round"></li>
+                    <li class="list__item"><img src="images/quote-4.png" alt="" class="img--round"></li>
+                </ul>
+                <blockquote class="blockquote">
+                    <p class="blockquote___text--large">In case you needed something fun and pointless</span>
+                    <p class="paragraph">Claritas est etiam processus dynamicus qui sequitur mutationem consuet lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteuerit litterarum formas humanitatis per seacula quarta decima et quinta dec</p>
+                    <p class="paragraph">David Warner - Artist</p>
+                </blockquote>
             </div>
-            <div class="gallery">
-                <figure class="card gallery__card">
-                    <img src="images/speaker-2.png" alt="" class="img">
-                    <figcaption class="gallery__text">
-                        <h4 class="header-4">Seth Rollins</h4>
-                        <p class="paragraph">GM, The boxtrap</p>
-                    </figcaption>
-                    <div class="gallery__container">
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+        </section>
+        <!-- News Section -->
+        <section class="section section--full">
+            <div class="wrapper">
+                <header class="secondary-header">
+                    <h2 class="header-2">Event schedule</h2>
+                    <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
+                </header>
+                <article class="article article--side-layout">
+                    <img src="images/news-1.png" alt="" class="img">
+                    <div class="article__text-box">
+                        <h4 class="header-4">River stumble as lights</h4>
+                        <p class="paragraph">By David Warner on 25 Apr 2017</p>
+                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                        <a href="" class="button">Read more</a>
                     </div>
-                </figure>
-                <figure class="card gallery__card">
-                    <img src="images/speaker-1.png" alt="" class="img">
-                    <figcaption class="gallery__text">
-                        <h4 class="header-4">Ashley Warner</h4>
-                        <p class="paragraph">CEO, Hotem Co</p>
-                    </figcaption>
-                    <div class="card__container">
-                        <a href="" class="icon gallery__icon"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="" class="icon gallery__icon"><i class="fab fa-twitter"></i></a>
-                        <a href="" class="icon gallery__icon"><i class="fab fa-facebook-f"></i></a>
+                </article>
+                <article class="article article--top-layout">
+                    <img src="images/news-2.png" alt="" class="img">
+                    <div class="article__text-box">
+                        <h4 class="header-4">How to build your event</h4>
+                        <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
+                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                        <a href="" class="button">Read more</a>
                     </div>
-                </figure>
-                <figure class="card gallery__card">
-                    <img src="images/speaker-3.png" alt="" class="img">
-                    <figcaption class="gallery__text">
-                        <h4 class="header-4">Darcy Owens</h4>
-                        <p class="paragraph">Producer, CSI Cyber</p>
-                    </figcaption>
-                    <div class="card__container">
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                </article>
+                <article class="article article--single-layout">
+                    <div class="article__text-box">
+                        <h4 class="header-4">How to build your event</h4>
+                        <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
+                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                        <a href="" class="button">Read more</a>
                     </div>
-                </figure>
-                <figure class="card gallery__card">
-                    <img src="images/speaker-4.png" alt="" class="img">
-                    <figcaption class="gallery__text">
-                        <h4 class="header-4">Adam Rose</h4>
-                        <p class="paragraph">CCO, Bittorent</p>
-                    </figcaption>
-                    <div class="card__container">
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="icon gallery__icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                </article>
+                <article class="article article--single-layout">
+                    <div class="article__text-box">
+                        <a href="" class="article__text-box__link">http://www.facebook.com</a>
+                        <a href="" class="button">Read more</a>
                     </div>
-                </figure>
+                </article>
+            </div>
+        </section>
+       <!-- Newsletter sign-up -->
+        <section class="section section--short">
+            <div class="wrapper">
+                <div class="section__inner section__inner--short">
+                    <h2 class="header-2">Join our event</h2>
+                    <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera
+                        gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
+                    <input type="email" class="input" placeholder="Your Email">
+                    <input type="submit" class="button" value="Subscribe">
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__inner footer__inner--top">
+            <div class="wrapper">
+                <div class="footer__inner__container">
+                    <img src="" alt="" class="img icon">
+                    <p class="paragraph">184 Collins Street West Victoria, United States, 8007</p>
+                </div>
+                <div class="footer__inner__container">
+                    <img src="" alt="" class="img icon">
+                    <a href="tel: 1-800-123-4567">(1800) 123 4567</a>
+                    <a href="tel: 1-800-123-4567">(1800) 123 4568</a>
+                </div>
+                <div class="footer__inner__container">
+                    <img src="" alt="" class="img icon">
+                    <a href="mailto:.info@lisbon.com">info@lisbon.com</a>
+                    <a href="mailto:support@lisbon.com">support@lisbon.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__inner footer__inner--bottom">
+            <div class="wrapper">
+                <img src="" alt="" class="img--logo">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Speakers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Schedule
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Sponsors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__list__link">
+                                Venues
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="p paragraph">Copyright &copy; <a href="">Lisbon</a> 2017</div>
+            </div><!-- /.wrapper -->
+        </div>
+    </footer>
 </body>
 </html>

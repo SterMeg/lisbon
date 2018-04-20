@@ -1,0 +1,53 @@
+.main-header {
+    background-image: url(../images/main-image.png);
+    background-size: cover;
+    // display: flex;
+    height: 100vh;
+    padding-top: 23px;
+    color: #fff;
+    .wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        height: inherit;
+    }
+}
+
+.nav {
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    @include fontSize(15);
+    &__logo {
+        align-self: flex-start;
+    }
+    &__icon {
+        background: $pink;
+        color: $contrastText;
+        margin-left: 15px;
+        width: 44px;
+        height: 44px; 
+    }
+    &__list {
+        flex-flow: row wrap;
+        flex-grow: 1;
+        justify-content: flex-end;
+        &__link {
+            color: $contrastText;
+            display: block;
+            letter-spacing: 1px;
+            padding: 46px 15px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.nav,
+.nav__list {
+    display: flex;
+}
+
+.feature {
+    margin: auto;
+    text-align: center;
+}
