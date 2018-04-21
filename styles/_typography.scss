@@ -1,26 +1,64 @@
 .header-1 {
     @include fontSize(44);
-    line-height: 26px;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
     font-weight: 800;
+    margin: 0 0 20px 0;
 }
 
 .header-2 {
     @extend .header-1;
     @include fontSize(36);
+    margin:0 0 20px 0;
     &--small {
         @include fontSize(16);
+    }
+    &--med {
+        @include fontSize(26);
     }
 }
 
 .header-3 {
+    color: $textGrey;
     font-family: "Poppins", sans-serif;
     @include fontSize(17);
     font-style: italic;
+    font-weight: 400;
+}
+
+.header-4 {
+    font-family: "Raleway", sans-serif;
+    @include fontSize(20);
+    font-weight: 500;
+    margin: 0;
 }
 
 .paragraph {
     font-family: "Poppins", sans-serif;
     @include fontSize(14);
+    line-height: 1.8;
+    &--uppercase {
+        color: $textGrey;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 0 16px 0;
+    }
+    &--large {
+        @include fontSize(40);
+        font-weight: 500;
+        position: relative;
+        line-height: 1;
+    }
+    &--pseudo {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        &::before {
+            content: "$";
+            @include fontSize(26);
+            font-weight: 300;
+            align-self: flex-start;
+            line-height: 1.2;
+        }
+    }
 }

@@ -3,8 +3,19 @@
     background-size: cover;
     // display: flex;
     height: 100vh;
-    padding-top: 23px;
+    padding-top: 24px;
     color: #fff;
+    &__nav {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+            width: 100%;
+        }
+    }
     .wrapper {
         display: flex;
         flex-flow: column wrap;
@@ -14,12 +25,12 @@
 
 .nav {
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
     @include fontSize(15);
     &__logo {
-        align-self: flex-start;
+        margin-bottom: 24px;
     }
     &__icon {
         background: $pink;
@@ -36,7 +47,7 @@
             color: $contrastText;
             display: block;
             letter-spacing: 1px;
-            padding: 46px 15px;
+            padding: 15px;
             text-transform: uppercase;
         }
     }
@@ -50,4 +61,29 @@
 .feature {
     margin: auto;
     text-align: center;
+    &__header-3 {
+        @include fontSize(22);
+        color: #fff;
+        margin-bottom: 28px;
+    }
+    &__button {
+        margin: 36px auto;
+        padding: 20px 60px;
+        width: fit-content;
+    }
+}
+
+.secondary-header {
+    margin-bottom: 50px;
+    padding-bottom: 36px;
+    position: relative;
+    text-align: center;
+    &:after {
+        content: "";
+        border-bottom: $pink 1px solid; 
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 5%;
+    }
 }

@@ -15,7 +15,10 @@ body {
 .wrapper {
     margin: 0 auto;
     max-width: 1170px;
-    display: flex;
+    &--flex {
+        @extend %flex;
+    }
+    // display: flex;
 }
 
 img {
@@ -32,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+%flex {
+    display: flex;
+}
+
 
 .icon {
     border-radius: 50%;
@@ -41,21 +48,53 @@ a {
 .button {
     background: $pink;
     border: none;
-    color: #fff;   
+    border-radius: 5px;
+    color: $contrastText;   
+    display: block;
     font-family: "Raleway", sans-serif;
     @include fontSize(15);
-    padding: 20px 60px;
+    padding: 20px 46px;
     text-transform: uppercase;
     &--secondary {
         background: $purple;
+        margin-right: 13px;
     }
+
 }
 
-.section__inner--flex {
-    display: flex;
-}
-.counter__inner {
-    display: flex;
+.counter {
+     position: relative;
+    &:not(:last-child):after {
+            content: ":";
+            position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 22px;
+            right: 9px;
+            top: 20%;
+            transform: translateY(-50%);
+        }   
+    &__inner {
+        display: flex;
+       
+
+        &:not(:last-child) {
+            margin-right: 18px;
+        }    
+       
+    }
+
+    &__card {
+        background: $counter;
+        border-radius: 5px;
+        color: $contrastText;
+        display: flex;
+        height: 45px;
+        margin-right: 2px;
+        width: 37px;
+        &__text {
+            margin: auto;
+        }
+    }   
 }
 
 .section {
@@ -63,4 +102,79 @@ a {
     &--secondary-color {
         background: $backgroundShaded;
     }
+    &--one {
+        padding: 88px 0;
+    }
+    &--dark {
+            background: $purple;
+            color: $contrastText;
+            &--image {
+                background-image: url(../images/Pattern.png);
+            }
+    }
+    &--short {
+        padding: 105px 0;
+        &--image {
+            background-image: url(../images/pattern-light.png);
+        }
+       
+    }
+    &--image {
+        background-image: url(../images/pricing-image.png);
+        background-repeat: no-repeat;
+        }
+
+    &__inner {
+        width: 37.5%;
+        &--small {
+            width: 25%;
+        }
+        &--flex {
+            @extend %flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
 }
+
+.card {
+    margin-right: 35px;
+    flex-grow: 1;
+    &:last-child {
+        margin: 0;
+    }
+    &__text {
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
+        padding: 44px 22px;    
+    }
+    &:hover .card__text {
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.13);
+    }
+    &__link {
+        font-family: "Poppins", sans-serif;
+        color: $pink;
+        text-transform: capitalize;
+        font-style: italic;
+        &:hover {
+            color: purple;
+        }
+    }
+}
+
+.gallery,
+.card-container {
+    &--flex {
+        @extend %flex;
+    }
+}
+
+.card-container {
+    background: $contrastText;
+    box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    padding: 34px;
+    &__card {
+        background: $priceBox;
+        padding: 50px 68px;
+        text-align: center;
+    }
+}   

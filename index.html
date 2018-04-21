@@ -7,14 +7,14 @@
     <title>Lisbon</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400, 400i, 500, 800|Raleway:400,500,800" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- HEADER BEGINS -->
     <header class="main-header">
         <div class="wrapper">
-            <nav class="nav">
+            <nav class="nav main-header__nav">
                 <img src="images/logo.png" alt="Lisbon logo" class="nav__logo">
                 <ul class="nav__list">
                     <li>
@@ -46,9 +46,9 @@
             </nav>
             <div class="feature">
                 <img src="images/Icon.png" alt="icon of a microphone">
-                <h3 class="header-3">20 - 22 June, 2018, New York</h3>
+                <h3 class="header-3 feature__header-3">20 - 22 June, 2018, New York</h3>
                 <h1 class="header-1">World Digital Conference 2018</br> Lead to your career</h1>
-                <a href="#" class="button">Buy tickets</a>
+                <a href="#" class="button feature__button">Buy tickets</a>
             </div>
         </div>
     </header>
@@ -56,14 +56,14 @@
     <!-- MAIN START -->
     <main class="main">
         <!-- Tickets Section -->
-        <section class="section section--secondary-color">
-            <div class="wrapper">
+        <section class="section section--one section--secondary-color">
+            <div class="wrapper wrapper--flex">
             <!-- Conference dates -->
-                <div class="section__inner">
-                    <p class="paragraph">
+                <div class="section__inner--small">
+                    <p class="paragraph--uppercase">
                         26-29 August 2017, Berlin
                     </p>
-                    <h2 class="header-2 header-2--small">
+                    <h2 class="header-2 header-2--med">
                         International conference in 2017
                     </h2>
                 </div>
@@ -71,36 +71,54 @@
                 <div class="section__inner section__inner--flex">
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
-                            <p class="counter__card">1</p>
-                            <p class="counter__card">4</p>
-                            <p class="counter__card">8</p>
+                            <div class="counter__card">
+                                <p class="counter__card__text">1</p> 
+                            </div>
+                            <div class="counter__card">
+                                <p class="counter__card__text">4</p> 
+                            </div>
+                            <div class="counter__card">
+                                <p class="counter__card__text">8</p> 
+                            </div>
                         </div>
                         <p class="paragraph">Days</p>
                     </div>
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
-                            <p class="counter__card">2</p>
-                            <p class="counter__card">5</p>
+                            <div class="counter__card">
+                                <p class="counter__card__text">2</p>
+                            </div>
+                            <div class="counter__card">
+                                <p class="counter__card__text">5</p>
+                            </div>
                         </div>
                         <p class="paragraph">Hours</p>
                     </div>
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
-                            <p class="counter__card">2</p>
-                            <p class="counter__card">8</p>
+                            <div class="counter__card">
+                                <p class="counter__card__text">2</p>
+                            </div>
+                            <div class="counter__card">
+                                <p class="counter__card__text">8</p>
+                            </div>
                         </div>
                         <p class="paragraph">Minutes</p>
                     </div>
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
-                            <p class="counter__card">1</p>
-                            <p class="counter__card">5</p>
+                            <div class="counter__card">
+                                <p class="counter__card__text">1</p>
+                            </div>
+                            <div class="counter__card">
+                                <p class="counter__card__text">5</p>
+                            </div>
                         </div>
                         <p class="paragraph">Seconds</p>
                     </div>
                 </div>
                 <!-- Buy tickets -->
-                <div class="section__inner">
+                <div class="section__inner--flex">
                     <button class="button button--secondary">Buy ticket</button>
                     <a href="#" class="button">See details</a>
                 </div>
@@ -113,36 +131,42 @@
                     <h2 class="header-2">About this event</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
-                <div class="section__inner">
+                <div class="section__inner--flex">
                     <article class="card">
                         <img src="images/about-image-1.png" alt="" class="img">
-                        <h2 class="header-2 header-2--small">
-                           Why are we doing this?
-                        </h2>
-                        <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                        <a href="#" class="card__link">Read more</a>
+                        <div class="card__text">
+                            <h2 class="header-2 header-2--small">
+                            Why are we doing this?
+                            </h2>
+                            <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                            <a href="#" class="card__link">Read more</a>
+                        </div>
                     </article>
                     <article class="card">
                         <img src="images/about-image-2.png" alt="" class="img">
-                        <h2 class="header-2 header-2--small">
-                            What will you learn?
-                        </h2>
-                        <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                        <a href="#" class="card__link">Read more</a>
+                        <div class="card__text">
+                            <h2 class="header-2 header-2--small">
+                                What will you learn?
+                            </h2>
+                            <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                            <a href="#" class="card__link">Read more</a>
+                        </div>
                     </article>
                     <article class="card">
                         <img src="images/about-image-3.png" alt="" class="img">
-                        <h2 class="header-2 header-2--small">
-                            What are the benefits?
-                        </h2>
-                        <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                        <a href="#" class="card__link">Read more</a>
+                        <div class="card__text">
+                            <h2 class="header-2 header-2--small">
+                                What are the benefits?
+                            </h2>
+                            <p class="paragraph">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                            <a href="#" class="card__link">Read more</a>
+                        </div>
                     </article>
                 </div><!-- /.section__inner -->
             </div><!-- /.wrapper -->
         </section>
         <!-- Join Section -->
-        <section class="section section--short--dark">
+        <section class="section section--dark section--dark--image section--short">
             <div class="wrapper">
                 <div class="section__inner section__inner--short">
                     <h2 class="header-2">Join our event</h2>
@@ -153,16 +177,16 @@
             </div>
         </section>
         <!-- Event Speakers Section -->
-        <section class="section section--full">
+        <section class="section">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 class="header-2">Our event speakers</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
-                <div class="gallery">
+                <div class="gallery--flex">
                     <figure class="card gallery__card">
                         <img src="images/speaker-1.png" alt="" class="img">
-                        <figcaption class="gallery__text">
+                        <figcaption class="card__text">
                             <h4 class="header-4">Ashley Warner</h4>
                             <p class="paragraph">CEO, Hotem Co</p>
                         </figcaption>
@@ -174,7 +198,7 @@
                     </figure>
                     <figure class="card gallery__card">
                         <img src="images/speaker-2.png" alt="" class="img">
-                        <figcaption class="gallery__text">
+                        <figcaption class="card__text">
                             <h4 class="header-4">Seth Rollins</h4>
                             <p class="paragraph">GM, The boxtrap</p>
                         </figcaption>
@@ -191,20 +215,8 @@
                         </div>
                     </figure>
                     <figure class="card gallery__card">
-                        <img src="images/speaker-1.png" alt="" class="img">
-                        <figcaption class="gallery__text">
-                            <h4 class="header-4">Ashley Warner</h4>
-                            <p class="paragraph">CEO, Hotem Co</p>
-                        </figcaption>
-                        <div class="card__container">
-                            <a href="" class="icon gallery__icon"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="" class="icon gallery__icon"><i class="fab fa-twitter"></i></a>
-                            <a href="" class="icon gallery__icon"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </figure>
-                    <figure class="card gallery__card">
                         <img src="images/speaker-3.png" alt="" class="img">
-                        <figcaption class="gallery__text">
+                        <figcaption class="card__text gallery__text">
                             <h4 class="header-4">Darcy Owens</h4>
                             <p class="paragraph">Producer, CSI Cyber</p>
                         </figcaption>
@@ -222,7 +234,7 @@
                     </figure>
                     <figure class="card gallery__card">
                         <img src="images/speaker-4.png" alt="" class="img">
-                        <figcaption class="gallery__text">
+                        <figcaption class="card__text">
                             <h4 class="header-4">Adam Rose</h4>
                             <p class="paragraph">CCO, Bittorent</p>
                         </figcaption>
@@ -247,17 +259,17 @@
             </div><!-- /.wrapper -->
         </section>
         <!-- Pricing Section -->
-        <section class="section section--full">
+        <section class="section section--image">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 class="header-2">Our pricing</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
-                <div class="section__card-container">
-                    <div class="card">
+                <div class="card-container card-container--flex">
+                    <div class="card card-container__card">
                         <h4 class="header-4">Basic Plan</h4>
-                        <p class="paragraph">Standard pricing plan</p>
-                        <p class="paragraph"><span class="paragraph__large">35</span> / monthly</p>
+                        <p class="paragraph clearfix">Standard pricing plan</p>
+                        <p class="paragraph paragraph--pseudo"><span class="paragraph--large">35</span> / monthly</p>
                         <ul class="card__list">
                             <li class="card__list__list-item">
                                 <p class="paragraph">Clients support 3 event</p>   
@@ -274,11 +286,11 @@
                         </ul>
                         <a href="#" class="button">See details</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-container__card">
                         <h4 class="header-4">Optimal Plan</h4>
                         <p class="paragraph">Standard pricing plan</p>
-                        <p class="paragraph">
-                            <span class="paragraph__large">60</span> / monthly</p>
+                        <p class="paragraph paragraph--pseudo">
+                            <span class="paragraph--large">60</span> / monthly</p>
                         <ul class="card__list">
                             <li class="card__list__list-item">
                                 <p class="paragraph">Clients support 3 event</p>
@@ -295,11 +307,11 @@
                         </ul>
                         <a href="#" class="button">See details</a>
                     </div>
-                    <div class="card">
+                    <div class="card card-container__card">
                         <h4 class="header-4">Premium Plan</h4>
                         <p class="paragraph">Standard pricing plan</p>
-                        <p class="paragraph">
-                            <span class="paragraph__large">90</span> / monthly</p>
+                        <p class="paragraph paragraph--pseudo">
+                            <span class="paragraph--large">90</span> / monthly</p>
                         <ul class="card__list">
                             <li class="card__list__list-item">
                                 <p class="paragraph">Clients support 3 event</p>
@@ -320,7 +332,7 @@
             </div><!-- /.wrapper -->
         </section>
         <!-- Event Schedule Section -->
-        <section class="section section--full">
+        <section class="section section--secondary-color">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 class="header-2">Event schedule</h2>
@@ -377,7 +389,7 @@
             </div><!-- /.wrapper -->
         </section>
         <!-- Quote section -->
-        <section class="section section--offset">
+        <section class="section section--dark section--offset">
             <div class="wrapper">
                 <ul class="list--sidebar">
                     <li class="list__item"><img src="images/quote-1.png" alt="" class="img--round"></li>
@@ -393,7 +405,7 @@
             </div>
         </section>
         <!-- News Section -->
-        <section class="section section--full">
+        <section class="section">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 class="header-2">Event schedule</h2>
@@ -434,12 +446,10 @@
             </div>
         </section>
        <!-- Newsletter sign-up -->
-        <section class="section section--short">
+        <section class="section section--short section--short--image">
             <div class="wrapper">
                 <div class="section__inner section__inner--short">
-                    <h2 class="header-2">Join our event</h2>
-                    <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera
-                        gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
+                    <h2 class="header-2">Sign up for our newsletter</h2>
                     <input type="email" class="input" placeholder="Your Email">
                     <input type="submit" class="button" value="Subscribe">
                 </div>
