@@ -59,6 +59,9 @@
 }
 
 .feature {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     margin: auto;
     text-align: center;
     &__header-3 {
@@ -69,7 +72,6 @@
     &__button {
         margin: 36px auto;
         padding: 20px 60px;
-        width: fit-content;
     }
 }
 

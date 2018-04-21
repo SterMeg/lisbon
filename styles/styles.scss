@@ -23,6 +23,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 ul {
@@ -125,7 +126,9 @@ a {
         }
 
     &__inner {
+        &--med {
         width: 37.5%;
+        }
         &--small {
             width: 25%;
         }
@@ -138,7 +141,7 @@ a {
 }
 
 .card {
-    margin-right: 35px;
+    margin-right: 34px;
     flex-grow: 1;
     &:last-child {
         margin: 0;
@@ -159,6 +162,13 @@ a {
             color: purple;
         }
     }
+    &__list {
+        text-align: left;
+        &__list-item {
+            border-top: 1px dashed $priceBoxContrast;
+            padding: 0 68px;
+        }
+    }
 }
 
 .gallery,
@@ -168,13 +178,50 @@ a {
     }
 }
 
+.overlay-container {
+    position: relative;
+}
+
+.gallery {
+    &__card:hover .card__text {
+        background: $purple;
+        color: $contrastText;
+    }
+    &__card:hover .gallery__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        bottom: 10%;
+        position: absolute;
+    }
+    &__container {
+        display: none;   
+    }
+    &__icon {
+        background:rgba(0, 0, 0, 0.55);
+        color: $contrastText;
+        width: 34px;
+        height: 34px;
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+         &:not(last-child) {
+            margin-right: 6px;
+        }
+        &:hover {
+            background: $pink;
+        }
+    }
+}
+
 .card-container {
     background: $contrastText;
     box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.04);
     padding: 34px;
     &__card {
         background: $priceBox;
-        padding: 50px 68px;
+        border: 1px solid $priceBoxContrast;
+        padding: 50px 0;
         text-align: center;
     }
 }   
