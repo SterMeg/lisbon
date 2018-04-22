@@ -17,30 +17,14 @@
             <nav class="nav main-header__nav">
                 <img src="images/logo.png" alt="Lisbon logo" class="nav__logo">
                 <ul class="nav__list">
-                    <li>
-                        <a href="" class="nav__list__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">About us</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Speakers</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Pages</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Sponsors</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Blog</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Venues</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav__list__link">Contact us</a>
-                    </li>    
+                    <li><a href="" class="nav__list__link">Home</a></li>
+                    <li><a href="" class="nav__list__link">About us</a></li>
+                    <li><a href="" class="nav__list__link">Speakers</a></li>
+                    <li><a href="" class="nav__list__link">Pages</a></li>
+                    <li><a href="" class="nav__list__link">Sponsors</a></li>
+                    <li><a href="" class="nav__list__link">Blog</a></li>
+                    <li><a href="" class="nav__list__link">Venues</a></li>
+                    <li><a href="" class="nav__list__link">Contact us</a></li> 
                 </ul>
                 <button class="icon nav__icon"><i class="fas fa-search"></i></button>
             </nav>
@@ -68,7 +52,7 @@
                     </h2>
                 </div>
                 <!-- Countdown -->
-                <div class="section__inner section__inner--med section__inner--flex">
+                <div class="section__inner section__inner--flex">
                     <div class="counter section__inner__counter">
                         <div class="counter__inner">
                             <div class="counter__card">
@@ -118,7 +102,7 @@
                     </div>
                 </div>
                 <!-- Buy tickets -->
-                <div class="section__inner section__inner--med section__inner--flex">
+                <div class="section__inner section__inner--flex">
                     <button class="button button--secondary">Buy ticket</button>
                     <a href="#" class="button">See details</a>
                 </div>
@@ -171,8 +155,10 @@
                 <div class="section__inner section__inner--short">
                     <h2 class="header-2">Join our event</h2>
                     <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
-                    <input type="email" class="input" placeholder="Your Email">
-                    <input type="submit" class="button" value="Subscribe">
+                    <form class="input-container" action="">
+                        <input type="email" class="input-container__input" placeholder="Your Email">
+                        <input type="submit" class="button input-container__button" value="Subscribe">
+                    </form>
                 </div>
             </div>
         </section>
@@ -199,7 +185,7 @@
                                 </a>
                             </div>
                         </div>
-                        <figcaption class="card__text">
+                        <figcaption class="gallery__text card__text">
                             <h4 class="header-4">Ashley Warner</h4>
                             <p class="paragraph">CEO, Hotem Co</p>
                         </figcaption>
@@ -219,7 +205,7 @@
                                 </a>
                             </div>
                         </div>
-                        <figcaption class="card__text">
+                        <figcaption class="card__text gallery__text">
                             <h4 class="header-4">Seth Rollins</h4>
                             <p class="paragraph">GM, The boxtrap</p>
                         </figcaption>
@@ -259,30 +245,32 @@
                                 </a>
                             </div>
                         </div>
-                        <figcaption class="card__text">
+                        <figcaption class="gallery__text card__text">
                             <h4 class="header-4">Adam Rose</h4>
                             <p class="paragraph">CCO, Bittorent</p>
                         </figcaption>
                     </figure>
-                    <div class="gallery__container">
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                    </div>
                 </div><!-- /.gallery -->
+                <div class="button-container">
+                    <div class="button-container__circle"></div>
+                    <div class="button-container__circle button-container__circle--secondary"></div>
+                    <div class="button-container__circle"></div>
+                </div>
             </div><!-- /.wrapper -->
         </section>
         <!-- Pricing Section -->
         <section class="section section--image">
             <div class="wrapper">
-                <header class="secondary-header">
-                    <h2 class="header-2">Our pricing</h2>
+                <header class="secondary-header secondary-header--image">
+                    <h2 class="header-2 header-2">Our pricing</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
                 <div class="card-container card-container--flex">
                     <div class="card card-container__card">
-                        <h4 class="header-4">Basic Plan</h4>
-                        <p class="paragraph clearfix">Standard pricing plan</p>
+                        <header class="card__secondary-header">
+                            <h4 class="header-4">Basic Plan</h4>
+                            <p class="paragraph">Standard pricing plan</p>
+                        </header>
                         <p class="paragraph paragraph--pseudo"><span class="paragraph--large">35</span> / monthly</p>
                         <ul class="card__list">
                             <li class="card__list__list-item">
@@ -301,10 +289,12 @@
                         <a href="#" class="button">See details</a>
                     </div>
                     <div class="card card-container__card">
-                        <h4 class="header-4">Optimal Plan</h4>
-                        <p class="paragraph">Standard pricing plan</p>
+                        <header class="card__secondary-header">
+                            <h4 class="header-4">Optimal Plan</h4>
+                            <p class="paragraph">Standard pricing plan</p>
+                        </header>
                         <p class="paragraph paragraph--pseudo">
-                            <span class="paragraph--large">60</span> / monthly</p>
+                                <span class="paragraph--large">60</span> / monthly</p>
                         <ul class="card__list">
                             <li class="card__list__list-item">
                                 <p class="paragraph">Clients support 3 event</p>
@@ -322,8 +312,10 @@
                         <a href="#" class="button">See details</a>
                     </div>
                     <div class="card card-container__card">
-                        <h4 class="header-4">Premium Plan</h4>
-                        <p class="paragraph">Standard pricing plan</p>
+                        <header class="card__secondary-header">
+                            <h4 class="header-4">Premium Plan</h4>
+                            <p class="paragraph">Standard pricing plan</p>
+                        </header>
                         <p class="paragraph paragraph--pseudo">
                             <span class="paragraph--large">90</span> / monthly</p>
                         <ul class="card__list">
@@ -463,9 +455,11 @@
         <section class="section section--short section--short--image">
             <div class="wrapper">
                 <div class="section__inner section__inner--short">
-                    <h2 class="header-2">Sign up for our newsletter</h2>
-                    <input type="email" class="input" placeholder="Your Email">
-                    <input type="submit" class="button" value="Subscribe">
+                    <h2 class="header-4">Sign up for our newsletter</h2>
+                    <form action="" class="input-container">
+                        <input type="email" class="input input-container__input" placeholder="Your Email">
+                        <input type="submit" class="button input-container__button" value="Subscribe">
+                    </form>
                 </div>
             </div>
         </section>

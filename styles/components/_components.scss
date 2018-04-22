@@ -1,0 +1,112 @@
+
+// Site buttons
+.button {
+    background: $pink;
+    border: none;
+    border-radius: 5px;
+    color: $contrastText;   
+    display: block;
+    font-family: "Raleway", sans-serif;
+    @include fontSize(15);
+    padding: 20px 46px;
+    text-transform: uppercase;
+    // button with secondary color
+    &--secondary {
+        background: $purple;
+        margin-right: 13px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    &__circle {
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background-color: $purple;
+        margin: 3px;
+        position: relative;
+        &--secondary {
+            background: $pink;
+            &:after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: -2px;
+                border: 1px solid $pink;
+            }
+        }
+    }
+}
+
+// Base Icon styles
+.icon {
+    border-radius: 50%;
+    border: none;
+}
+
+
+// Card styles
+.card {
+    margin-right: 34px;
+    flex-grow: 1;
+    &:last-of-type {
+        margin: 0; //remove margin from last card in row
+    }
+    &__text {
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
+        padding: 44px 22px;    
+    }
+    &:hover .card__text {
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.13);
+    }
+    &__link {
+        font-family: "Poppins", sans-serif;
+        color: $pink;
+        text-transform: capitalize;
+        font-style: italic;
+        &:hover {
+            color: purple;
+        }
+    }
+    &__list {
+        text-align: left;
+        &__list-item {
+            border-top: 1px dashed $priceBoxContrast;
+            padding: 0 68px;
+        }
+    }
+    &__secondary-header {
+        position: relative;
+        &:after {
+            @extend .secondary-header:after;
+            width: 20%;
+            border-bottom: 1px solid $purple;
+        }
+    }
+}
+
+
+.input-container {
+    display: flex;
+    margin: 38px auto 0;
+    width: 75%;
+    &__input {
+        background: rgba(70, 63, 140, 0);
+        border-bottom: 1px solid $contrastText;
+        border-left: 1px solid $contrastText;
+        border-right: none;
+        border-top: 1px solid $contrastText;
+        border-radius: 5px 0 0 5px;
+        flex-grow: 1;
+        padding: 25px 20px;
+    }
+    &__button {
+        border-radius: 0 5px 5px 0;
+    }
+}

@@ -2,6 +2,7 @@
 @import "utils";
 @import "typography";
 @import "components/header";
+@import "components/components";
 @import "components/footer";
 
 html {
@@ -15,8 +16,12 @@ body {
 .wrapper {
     margin: 0 auto;
     max-width: 1170px;
+    @media screen and (max-width: 1190px) {
+        padding: 0px 20px;
+    }
     &--flex {
         @extend %flex;
+        justify-content: space-between;
     }
     // display: flex;
 }
@@ -40,29 +45,7 @@ a {
     display: flex;
 }
 
-
-.icon {
-    border-radius: 50%;
-    border: none;
-}
-
-.button {
-    background: $pink;
-    border: none;
-    border-radius: 5px;
-    color: $contrastText;   
-    display: block;
-    font-family: "Raleway", sans-serif;
-    @include fontSize(15);
-    padding: 20px 46px;
-    text-transform: uppercase;
-    &--secondary {
-        background: $purple;
-        margin-right: 13px;
-    }
-
-}
-
+// Countdown element
 .counter {
      position: relative;
     &:not(:last-child):after {
@@ -76,14 +59,10 @@ a {
         }   
     &__inner {
         display: flex;
-       
-
         &:not(:last-child) {
             margin-right: 18px;
-        }    
-       
+        }           
     }
-
     &__card {
         background: $counter;
         border-radius: 5px;
@@ -109,16 +88,19 @@ a {
     &--dark {
             background: $purple;
             color: $contrastText;
+            .paragraph {
+                color: $contrastText;
+            }
             &--image {
                 background-image: url(../images/Pattern.png);
             }
     }
     &--short {
         padding: 105px 0;
+        text-align: center;
         &--image {
             background-image: url(../images/pattern-light.png);
-        }
-       
+        }      
     }
     &--image {
         background-image: url(../images/pricing-image.png);
@@ -126,50 +108,22 @@ a {
         }
 
     &__inner {
-        &--med {
-        width: 37.5%;
-        }
         &--small {
-            width: 25%;
+            max-width: 25%;
         }
         &--flex {
             @extend %flex;
             justify-content: center;
             align-items: flex-start;
         }
+        &--short {
+            max-width: 75%;
+            margin: 0 auto;
+        }
     }
 }
 
-.card {
-    margin-right: 34px;
-    flex-grow: 1;
-    &:last-child {
-        margin: 0;
-    }
-    &__text {
-        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
-        padding: 44px 22px;    
-    }
-    &:hover .card__text {
-        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.13);
-    }
-    &__link {
-        font-family: "Poppins", sans-serif;
-        color: $pink;
-        text-transform: capitalize;
-        font-style: italic;
-        &:hover {
-            color: purple;
-        }
-    }
-    &__list {
-        text-align: left;
-        &__list-item {
-            border-top: 1px dashed $priceBoxContrast;
-            padding: 0 68px;
-        }
-    }
-}
+
 
 .gallery,
 .card-container {
@@ -186,6 +140,9 @@ a {
     &__card:hover .card__text {
         background: $purple;
         color: $contrastText;
+        .paragraph {
+            color: $contrastText;
+        }
     }
     &__card:hover .gallery__container {
         display: flex;
@@ -212,6 +169,17 @@ a {
             background: $pink;
         }
     }
+    &__text {
+        padding: 20px;
+        text-align: center;
+        .header-4 {
+            @include fontSize(16);
+        }
+        .paragraph {
+            @include fontSize(13);
+            margin: 3px 0 0 0;
+        }
+    }
 }
 
 .card-container {
@@ -223,5 +191,12 @@ a {
         border: 1px solid $priceBoxContrast;
         padding: 50px 0;
         text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        .button {
+            align-self: left;
+            margin-left: 68px;
+        }
     }
-}   
+}  
