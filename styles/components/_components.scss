@@ -20,7 +20,11 @@
         &:hover {
             background: darken($purple, 10);
         }
+        @media (max-width: 480px) {
+        margin: 0 0 13px 0;
+        }
     }
+   
 }
 
 .button-container {
@@ -60,7 +64,7 @@
 // Card styles
 .card {
     margin-right: 34px;
-    flex-grow: 1;
+    // flex-grow: 1;
     &:last-of-type {
         margin: 0; //remove margin from last card in row
     }
@@ -95,6 +99,12 @@
             border-bottom: 1px solid $purple;
         }
     }
+    @media (max-width: 480px) {
+        width: initial;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 36px 0;
+    }
 }
 
 
@@ -111,8 +121,21 @@
         border-radius: 5px 0 0 5px;
         flex-grow: 1;
         padding: 16px 20px;
+        @media (max-width: 480px) {
+            border-radius: 5px 5px 0 0;
+            border-bottom: none;
+            border-right: 1px solid $contrastText;
+        }
     }
     &__button {
         border-radius: 0 5px 5px 0;
+        @media (max-width: 480px) {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+    @media (max-width: 480px) {
+        width: initial;
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -42,6 +42,7 @@ a {
 
 %flex {
     display: flex;
+    // flex-wrap: wrap;
 }
 
 // Countdown element
@@ -73,7 +74,10 @@ a {
         &__text {
             margin: auto;
         }
-    }   
+    } 
+    @media (max-width: 480px) {
+        display: none;
+    }  
 }
 
 .section {
@@ -83,6 +87,13 @@ a {
     }
     &--one {
         padding: 88px 0;
+        .wrapper {
+            @media (max-width: 1120px) {
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+            }
+        }
     }
     &--dark {
             background: $purple;
@@ -108,12 +119,22 @@ a {
 
     &__inner {
         &--small {
-            max-width: 25%;
+            width: 25%;
+            @media (max-width: 1120px) {
+                width: 100%;
+            }
         }
         &--flex {
             @extend %flex;
             justify-content: center;
             align-items: flex-start;
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+            }
+            @media (max-width: 480px) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         &--short {
             max-width: 75%;
@@ -121,6 +142,9 @@ a {
         }
         &--half {
             width: 50%;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
         }
     }
     &--offset {
@@ -134,7 +158,12 @@ a {
 .card-container {
     &--flex {
         @extend %flex;
+    
+        @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
     }
+     }
 }
 
 .overlay-container {
@@ -185,6 +214,13 @@ a {
             margin: 3px 0 0 0;
         }
     }
+    &__card {
+        @media (max-width: 768px) {
+        &:nth-of-type(2) {
+            margin: 0;
+        }
+    }
+    }
 }
 
 .card-container {
@@ -207,12 +243,24 @@ a {
 }  
 
 .list--sidebar {
-    background: $contrastText;
     width: 25%;
     align-self: center;
+    @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
     &__list-item {
         border: 1px solid $priceBox;
         padding: 16px 20px;
+        background: $contrastText;
+        @media (max-width: 768px) {
+            flex-grow: 1;
+        }
         &:hover {
             background: $pink;
             .list--sidebar__paragraph,
@@ -244,6 +292,9 @@ a {
         top: 5%;
         border: 1px dashed $priceBox;
         bottom: 20%;
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
     .header-4 {
         margin-bottom: 14px;
@@ -251,11 +302,22 @@ a {
     .paragraph {
         margin: 0;
     }
+    @media (max-width: 768px) {
+        width: 100%;
+        padding-left: 50px;
+    }
+    @media (max-width: 480px) {
+        padding: 0;
+    }
 }
 
 .article {
     &__image-container {
         width: 12%;
+        @media (max-width: 480px) {
+            width: initial;
+            margin-bottom: 36px;
+        }
         &__image {
         border-radius: 50%;
         background: $priceBox;
@@ -264,12 +326,19 @@ a {
     }
     &__container {
         margin-left: 34px;
+        @media (max-width: 480px) {
+            margin-left: 0;
+        }
     }
     &--flex {
         @extend %flex;
          &:not(:last-child) {
         margin-bottom: 60px;
-    }   
+         }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+        }   
     }
     .header-4 {
         @include fontSize(18);
@@ -288,6 +357,10 @@ a {
         background: $backgroundShaded;
         grid-column: 3;
         grid-row: 1 / span 2;
+        @media (max-width: 768px) {
+            grid-column: 1;
+            grid-row: 2 / span 2;
+        }
     }
     &--single-layout {
         background: $backgroundShaded;
@@ -346,4 +419,27 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     grid-auto-rows: 1fr;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        }
     }
+
+
+@media (max-width: 768px) {
+    .card--half {
+        width: calc(50% - 17px);
+        &:nth-child(2) {
+             margin: 0;
+            @media (max-width: 480px) {
+                 margin-bottom: 36px; 
+                }
+            }
+        @media (max-width: 480px) {
+        width: initial;
+       }
+    }
+    .card--flex {
+        display: flex;
+        margin-top: 34px;
+    }
+}
