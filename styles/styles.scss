@@ -23,7 +23,6 @@ body {
         @extend %flex;
         justify-content: space-between;
     }
-    // display: flex;
 }
 
 img {
@@ -120,6 +119,12 @@ a {
             max-width: 75%;
             margin: 0 auto;
         }
+        &--half {
+            width: 50%;
+        }
+    }
+    &--offset {
+        
     }
 }
 
@@ -200,3 +205,145 @@ a {
         }
     }
 }  
+
+.list--sidebar {
+    background: $contrastText;
+    width: 25%;
+    align-self: center;
+    &__list-item {
+        border: 1px solid $priceBox;
+        padding: 16px 20px;
+        &:hover {
+            background: $pink;
+            .list--sidebar__paragraph,
+            .list--sidebar__paragraph--small {
+            color: $contrastText;
+            }
+        }
+    }
+    &__paragraph {
+        @include fontSize(18);
+        color: $textBlack;
+        margin: 0;
+        &--small {
+            @include fontSize(13);
+            color: $eventSide;
+            margin: 0;
+        }
+    }
+}
+
+.articles {
+    padding-left: 100px;
+    width: 75%;
+    position: relative;
+    &::before {
+        content:"";
+        position: absolute;
+        left: 50px;
+        top: 5%;
+        border: 1px dashed $priceBox;
+        bottom: 20%;
+    }
+    .header-4 {
+        margin-bottom: 14px;
+    }
+    .paragraph {
+        margin: 0;
+    }
+}
+
+.article {
+    &__image-container {
+        width: 12%;
+        &__image {
+        border-radius: 50%;
+        background: $priceBox;
+        padding: 7px;
+        }
+    }
+    &__container {
+        margin-left: 34px;
+    }
+    &--flex {
+        @extend %flex;
+         &:not(:last-child) {
+        margin-bottom: 60px;
+    }   
+    }
+    .header-4 {
+        @include fontSize(18);
+    }
+    .paragraph {
+        @include fontSize(13);
+    }
+    &--side-layout {
+        background: $backgroundShaded;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    &--top-layout {
+        background: $backgroundShaded;
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+    &--single-layout {
+        background: $backgroundShaded;
+        display: flex;
+        flex-direction: column;
+    }
+    &__link-box {
+        background: $purple;
+        height: 50%;
+        width: 100%;
+        &__link {
+            color: $contrastText;
+            display: flex;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            @include fontSize(18);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+    &__text-box {
+        // padding: 38px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: flex-start;
+        &__link {
+            color: $contrastText;
+            
+        }
+    }
+}
+
+.list--sidebar--image {
+    width: 10%;
+    .list__item {
+        margin-bottom: 28px;
+        .img--round {
+            @extend .article__image-container__image;
+            &--noBorder {
+                background: none;
+            }
+        }
+    }
+}
+
+.blockquote {
+    padding-left: 100px;
+}
+
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: 1fr;
+    }

@@ -5,6 +5,7 @@
     height: 100vh;
     padding-top: 24px;
     color: #fff;
+    position: relative;
     &__nav {
         border-bottom: 1px solid rgba(255, 255, 255, 0.22);
         position: relative;
@@ -75,6 +76,28 @@
     }
 }
 
+.chevron-left,
+.chevron-right {
+    color: $contrastText;
+    position: absolute;
+    @include fontSize(18);
+    background:rgba(255, 255, 255, 0.28);
+    padding: 36px 14px;
+    top: 50%;
+    &:hover {
+        background: darken(rgba(255, 255, 255, 0.28), 10);
+        color: darken($pink, 10);
+    }
+}
+
+.chevron-left {
+    left: 0;
+}
+
+.chevron-right {
+    right: 0;
+}
+
 .secondary-header {
     margin-bottom: 50px;
     padding-bottom: 36px;
@@ -96,5 +119,8 @@
         .header-3 {
             color: $contrastText;
         }
+    }
+    &--grid {
+        grid-column: 1 / span 3;
     }
 }

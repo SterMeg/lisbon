@@ -8,12 +8,18 @@
     display: block;
     font-family: "Raleway", sans-serif;
     @include fontSize(15);
-    padding: 20px 46px;
+    padding: 16px 46px;
     text-transform: uppercase;
+    &:hover {
+        background: darken($pink, 10);
+    }
     // button with secondary color
     &--secondary {
         background: $purple;
         margin-right: 13px;
+        &:hover {
+            background: darken($purple, 10);
+        }
     }
 }
 
@@ -104,7 +110,7 @@
         border-top: 1px solid $contrastText;
         border-radius: 5px 0 0 5px;
         flex-grow: 1;
-        padding: 25px 20px;
+        padding: 16px 20px;
     }
     &__button {
         border-radius: 0 5px 5px 0;

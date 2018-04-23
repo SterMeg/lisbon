@@ -32,6 +32,18 @@
     margin: 0;
 }
 
+.header-5 {
+    @extend .header-4;
+    @include fontSize(14);
+    margin-bottom: 16px;
+    &--light {
+        @include fontSize(13);
+        color: $textGrey;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+}
+
 .paragraph {
     font-family: "Poppins", sans-serif;
     @include fontSize(14);

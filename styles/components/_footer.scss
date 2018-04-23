@@ -1,8 +1,49 @@
+.footer__nav__list {
+    justify-content: center;
+}
+
 .footer__inner {
+    padding-top: 54px;
     &--top {
-    background: $footerBgTop;
+        background: $footerBgTop;
     }
     &--bottom {
-        
+        color: $contrastText;
+       background: $footerBgBottom; 
+       position: relative;
+       text-align: center;
+       .img--logo {
+           margin: 0 auto;
+       }
+       &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: -30px;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid $footerBgBottom;
+            left: 50%;
+            transform: translateX(-50%);
+       }
+    //    &::after {
+    //         content: "\f077";
+    //         color: white;
+    //         font-family: "FontAwesome";
+    //         @include fontSize(15);
+    //         position: absolute;
+    //         left: 50%;
+    //         top: 0;
+    //    } 
     }
+}
+
+.chevron {
+    position: absolute;
+    left: 50%;
+    @include fontSize(15);
+    transform: translateX(-50%);
+    top: -12px;
+
 }

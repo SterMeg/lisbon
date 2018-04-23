@@ -35,6 +35,12 @@
                 <a href="#" class="button feature__button">Buy tickets</a>
             </div>
         </div>
+        <div class="chevron-left">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="chevron-right">
+            <i class="fas fa-chevron-right"></i>
+        </div>
     </header>
     <!-- HEADER END -->
     <!-- MAIN START -->
@@ -344,48 +350,53 @@
                     <h2 class="header-2">Event schedule</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
-                <div class="section__inner">
-                    <ul class="list">
-                        <li class="list__list-item">
-                            <p class="paragraph">April 21</p>
-                            <p class="paragraph">First Day</p>
+                <div class="section__inner--flex">
+                    <ul class="list--sidebar list--sidebar">
+                        <li class="list--sidebar__list-item">
+                            <p class="paragraph list--sidebar__paragraph--small">April 21</p>
+                            <p class="list--sidebar__paragraph paragraph">First Day</p>
                         </li>
-                        <li class="list__list-item">
-                            <p class="paragraph">April 22</p>
-                            <p class="paragraph">Second Day</p>
+                        <li class="list--sidebar__list-item">
+                            <p class="list--sidebar__paragraph--small paragraph">April 22</p>
+                            <p class="list--sidebar__paragraph paragraph">Second Day</p>
                         </li>
-                        <li class="list__list-item">
-                            <p class="paragraph">April 24</p>
-                            <p class="paragraph">Third Day</p>
+                        <li class="list--sidebar__list-item">
+                            <p class="list--sidebar__paragraph--small paragraph">April 24</p>
+                            <p class="list--sidebar__paragraph paragraph">Third Day</p>
                         </li>
-                        <li class="list__list-item">
-                            <p class="paragraph">April 25</p>
-                            <p class="paragraph">Fourth Day</p>
+                        <li class="list--sidebar__list-item">
+                            <p class="list--sidebar__paragraph--small paragraph">April 25</p>
+                            <p class="list--sidebar__paragraph paragraph">Fourth Day</p>
                         </li>
                     </ul>
                     <div class="articles">
-                        <article class="article">
-                            <img src="images/schedule-1.png" alt="" class="img">
+                        <article class="article article--flex">
+                            <div class="article__image-container">
+                                <img src="images/schedule-1.png" alt="" class="image article__image-container__image">
+                            </div>
                             <div class="article__container">
-                                <h5 class="header-5"><span class="bold">David Johnson</span> 10AM - 12PM</h5>
+                                <h5 class="header-5">David Johnson<span class="header-5--light">10AM - 12PM</span></h5>
                                 <h4 class="header-4">Interfaces Holisticly predominate extensible testing procedures</h4>
                                 <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
                             </div>
                         </article>
-                        <article class="article">
-                            <img src="images/schedule-2.png" alt="" class="img">
+                        <article class="article article--flex">
+                            <div class="article__image-container">
+                                <img src="images/schedule-2.png" alt="" class="image article__image-container__image">
+                            </div>
                             <div class="article__container">
-                                <h5 class="header-5">
-                                    <span class="bold">Seth Rollis</span> 11AM - 2:30PM</h5>
+                                <h5 class="header-5">Seth Rollis<span class="header-5--light">11AM - 2:30PM</span></h5>
                                 <h4 class="header-4">Welcome Speech of UX Conf 2018</h4>
                                 <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
                             </div>
                         </article>
-                        <article class="article">
-                            <img src="images/schedule-3.png" alt="" class="img">
+                        <article class="article article--flex">
+                            <div class="article__image-container">
+                                <img src="images/schedule-3.png" alt="" class="image article__image-container__image">
+                            </div>
                             <div class="article__container">
-                                <h5 class="header-5">
-                                    <span class="bold">Adam Rose</span> 10AM - 2:00PM</h5>
+                                <h5 class="header-5">Adam Rose
+                                    <span class="header-5--light">10AM - 2:00PM</span></h5>
                                 <h4 class="header-4">Open your business around the world</h4>
                                 <p class="paragraph">Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis imperdiet nisiut, viverra lorem</p>
                             </div>
@@ -397,58 +408,70 @@
         <!-- Quote section -->
         <section class="section section--dark section--offset">
             <div class="wrapper">
-                <ul class="list--sidebar">
-                    <li class="list__item"><img src="images/quote-1.png" alt="" class="img--round"></li>
-                    <li class="list__item"><img src="images/quote-2.png" alt="" class="img--round"></li>
-                    <li class="list__item"><img src="images/quote-3.png" alt="" class="img--round"></li>
-                    <li class="list__item"><img src="images/quote-4.png" alt="" class="img--round"></li>
-                </ul>
-                <blockquote class="blockquote">
-                    <p class="blockquote___text--large">In case you needed something fun and pointless</span>
-                    <p class="paragraph">Claritas est etiam processus dynamicus qui sequitur mutationem consuet lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteuerit litterarum formas humanitatis per seacula quarta decima et quinta dec</p>
-                    <p class="paragraph">David Warner - Artist</p>
-                </blockquote>
+                <div class="section__inner--half section__inner--flex">
+                    <ul class="list--sidebar--image">
+                        <li class="list__item"><img src="images/quote-1.png" alt="" class="img--round"></li>
+                        <li class="list__item"><img src="images/quote-2.png" alt="" class="img--round img--round--noBorder"></li>
+                        <li class="list__item"><img src="images/quote-3.png" alt="" class="img--round img--round--noBorder"></li>
+                        <li class="list__item"><img src="images/quote-4.png" alt="" class="img--round img--round--noBorder"></li>
+                    </ul>
+                    <blockquote class="blockquote">
+                        <p class="blockquote___text--large">In case you needed something fun and pointless</span>
+                        <p class="paragraph">Claritas est etiam processus dynamicus qui sequitur mutationem consuet lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteuerit litterarum formas humanitatis per seacula quarta decima et quinta dec</p>
+                        <p class="paragraph">David Warner - Artist</p>
+                    </blockquote>
+                </div>
             </div>
         </section>
         <!-- News Section -->
         <section class="section">
             <div class="wrapper">
-                <header class="secondary-header">
+                <header class="secondary-header secondary-header--grid">
                     <h2 class="header-2">Event schedule</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
-                <article class="article article--side-layout">
-                    <img src="images/news-1.png" alt="" class="img">
-                    <div class="article__text-box">
-                        <h4 class="header-4">River stumble as lights</h4>
-                        <p class="paragraph">By David Warner on 25 Apr 2017</p>
-                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
-                        <a href="" class="button">Read more</a>
-                    </div>
-                </article>
-                <article class="article article--top-layout">
-                    <img src="images/news-2.png" alt="" class="img">
-                    <div class="article__text-box">
-                        <h4 class="header-4">How to build your event</h4>
-                        <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
-                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
-                        <a href="" class="button">Read more</a>
-                    </div>
-                </article>
-                <article class="article article--single-layout">
-                    <div class="article__text-box">
-                        <h4 class="header-4">How to build your event</h4>
-                        <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
-                        <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
-                        <a href="" class="button">Read more</a>
-                    </div>
-                </article>
-                <article class="article article--single-layout">
-                    <div class="article__text-box">
-                        <a href="" class="article__text-box__link">http://www.facebook.com</a>
-                        <a href="" class="button">Read more</a>
-                    </div>
-                </article>
+                <div class="article-container">
+                    <article class="article article--side-layout">
+                        <div class="image__container">
+                            <img src="images/news-1.png" alt="" class="img">
+                        </div>
+                        <div class="article__text-box">
+                            <h4 class="header-4">River stumble as lights</h4>
+                            <p class="paragraph">By David Warner on 25 Apr 2017</p>
+                            <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                            <a href="" class="button">Read more</a>
+                        </div>
+                    </article>
+                    <article class="article article--top-layout">
+                        <div class="image__container">
+                            <img src="images/news-2.png" alt="" class="img">
+                        </div>
+                        <div class="article__text-box">
+                            <h4 class="header-4">How to build your event</h4>
+                            <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
+                            <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                            <a href="" class="button">Read more</a>
+                        </div>
+                    </article>
+                    <article class="article article--single-layout">
+                        <div class="article__text-box">
+                            <h4 class="header-4">How to build your event</h4>
+                            <p class="paragraph">By Seth Rollins on 25 Apr 2017</p>
+                            <p class="paragraph">Interfaces Holisticly predominate elitslate extensible testing procedures.</p>
+                            <a href="" class="button">Read more</a>
+                        </div>
+                    </article>
+                    <article class="article article--single-layout">
+                        <div class="article__link-box">
+                            <a href="" class="article__link-box__link"><i class="fas fa-link"></i>
+                                <p>http://www.facebook.com</p>
+                            </a>
+                        </div>
+                        <div class="article__text-box">
+                            <a href="" class="button">Read more</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
        <!-- Newsletter sign-up -->
@@ -468,26 +491,29 @@
         <div class="footer__inner footer__inner--top">
             <div class="wrapper">
                 <div class="footer__inner__container">
-                    <img src="" alt="" class="img icon">
+                    <img src="images/mapicon.png" alt="" class="img icon">
                     <p class="paragraph">184 Collins Street West Victoria, United States, 8007</p>
                 </div>
                 <div class="footer__inner__container">
-                    <img src="" alt="" class="img icon">
+                    <img src="images/phoneicon.png" alt="" class="img icon">
                     <a href="tel: 1-800-123-4567">(1800) 123 4567</a>
                     <a href="tel: 1-800-123-4567">(1800) 123 4568</a>
                 </div>
                 <div class="footer__inner__container">
-                    <img src="" alt="" class="img icon">
+                    <img src="images/mailicon.png" alt="" class="img icon">
                     <a href="mailto:.info@lisbon.com">info@lisbon.com</a>
                     <a href="mailto:support@lisbon.com">support@lisbon.com</a>
                 </div>
             </div>
         </div>
         <div class="footer__inner footer__inner--bottom">
+            <div class="chevron">
+                <i class="fas fa-chevron-up"></i>
+            </div>
             <div class="wrapper">
-                <img src="" alt="" class="img--logo">
+                <img src="images/logo.png" alt="" class="img--logo">
                 <nav class="nav">
-                    <ul class="nav__list">
+                    <ul class="footer__nav__list nav__list">
                         <li>
                             <a href="" class="nav__list__link">
                                 Home
