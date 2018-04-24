@@ -2,7 +2,14 @@
     justify-content: center;
 }
 
+
 .footer {
+&__wrapper {
+    @media (max-width: 890px) {
+             flex-wrap: wrap;
+             justify-content: center;
+         }
+}    
 &__icon {
     width: 58px;
     height: 58px;
@@ -23,10 +30,13 @@
         @include fontSize(14);
         justify-content: center;
         align-items: center;
+         @media (max-width: 890px) {
+             width: 50%;
+             margin-bottom: 34px;
+         }
         &:not(:last-child) {
             border-right: 1px solid rgba(88, 88, 88, 0.58);
-    }
-
+        }
     }
     &--top {
         background: $footerBgTop;
