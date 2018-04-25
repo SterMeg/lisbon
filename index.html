@@ -15,16 +15,18 @@
     <header class="main-header">
         <div class="wrapper">
             <nav class="nav main-header__nav">
+                <label for="hamburger-menu" class="hamburger">Menu</label>
                 <img src="images/logo.png" alt="Lisbon logo" class="nav__logo">
-                <ul class="nav__list">
-                    <li><a href="" class="nav__list__link">Home</a></li>
-                    <li><a href="" class="nav__list__link">About us</a></li>
-                    <li><a href="" class="nav__list__link">Speakers</a></li>
-                    <li><a href="" class="nav__list__link">Pages</a></li>
-                    <li><a href="" class="nav__list__link">Sponsors</a></li>
-                    <li><a href="" class="nav__list__link">Blog</a></li>
-                    <li><a href="" class="nav__list__link">Venues</a></li>
-                    <li><a href="" class="nav__list__link">Contact us</a></li> 
+                <input type="checkbox" name="hamburger" id="hamburger-menu">
+                <ul class="main-header__nav__list nav__list">
+                    <li><a href="index.html" class="nav__list__link">Home</a></li>
+                    <li><a href="#about" class="nav__list__link">About us</a></li>
+                    <li><a href="#speakers" class="nav__list__link">Speakers</a></li>
+                    <li><a href="#" class="nav__list__link">Pages</a></li>
+                    <li><a href="#" class="nav__list__link">Sponsors</a></li>
+                    <li><a href="#" class="nav__list__link">Blog</a></li>
+                    <li><a href="#" class="nav__list__link">Venues</a></li>
+                    <li><a href="#" class="nav__list__link">Contact us</a></li> 
                 </ul>
                 <button class="icon nav__icon"><i class="fas fa-search"></i></button>
             </nav>
@@ -118,7 +120,7 @@
         <section class="section">
             <div class="wrapper">
                 <header class="secondary-header">
-                    <h2 class="header-2">About this event</h2>
+                    <h2 id="about" class="header-2">About this event</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
                 <div class="section__inner--flex">
@@ -162,7 +164,7 @@
                     <h2 class="header-2">Join our event</h2>
                     <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
                     <form class="input-container" action="">
-                        <input type="email" class="input-container__input" placeholder="Your Email">
+                        <input type="email" class="input-container__input  light" placeholder="Your Email">
                         <input type="submit" class="button input-container__button" value="Subscribe">
                     </form>
                 </div>
@@ -172,7 +174,7 @@
         <section class="section">
             <div class="wrapper">
                 <header class="secondary-header">
-                    <h2 class="header-2">Our event speakers</h2>
+                    <h2 id="speakers" class="header-2">Our event speakers</h2>
                     <h3 class="header-3">Starting your own IT business and picking the right niche in less than 30 days</h3>
                 </header>
                 <div class="gallery--flex">
@@ -416,9 +418,10 @@
                         <li class="list__item"><img src="images/quote-4.png" alt="" class="img--round img--round--noBorder"></li>
                     </ul>
                     <blockquote class="blockquote">
-                        <p class="blockquote___text--large">In case you needed something fun and pointless</span>
+                        <p class="blockquote__text--large">In case you needed something fun and pointless
+                        </p>
                         <p class="paragraph">Claritas est etiam processus dynamicus qui sequitur mutationem consuet lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteuerit litterarum formas humanitatis per seacula quarta decima et quinta dec</p>
-                        <p class="paragraph">David Warner - Artist</p>
+                        <p class="paragraph"><span class="author">David Warner</span> - Artist</p>
                     </blockquote>
                 </div>
             </div>
@@ -478,9 +481,9 @@
         <section class="section section--short section--short--image">
             <div class="wrapper">
                 <div class="section__inner section__inner--short">
-                    <h2 class="header-4">Sign up for our newsletter</h2>
+                    <h2 class="header-4 header-4--large">Sign up for our newsletter</h2>
                     <form action="" class="input-container">
-                        <input type="email" class="input input-container__input" placeholder="Your Email">
+                        <input type="email" class="input input-container__input dark input-container__input--dark" placeholder="Your email address">
                         <input type="submit" class="button input-container__button" value="Subscribe">
                     </form>
                 </div>
@@ -489,7 +492,7 @@
     </main>
     <footer class="footer">
         <div class="footer__inner footer__inner--top">
-            <div class="footer__wrapper wrapper--flex">
+            <div class="footer__wrapper--flex wrapper">
                 <div class="footer__inner__container">
                     <div class="footer__icon icon">
                         <img src="images/mapicon.png" alt="" class="image">
@@ -522,7 +525,7 @@
             </div>
             <div class="wrapper">
                 <img src="images/logo.png" alt="" class="img--logo">
-                <nav class="nav">
+                <nav class="nav footer__nav">
                     <ul class="footer__nav__list nav__list">
                         <li>
                             <a href="" class="nav__list__link">
@@ -556,7 +559,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="p paragraph">Copyright &copy; <a href="">Lisbon</a> 2017</div>
+                <div class="copyright paragraph">Copyright &copy; <a href="">Lisbon</a> 2017</div>
             </div><!-- /.wrapper -->
         </div>
     </footer>

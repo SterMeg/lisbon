@@ -92,6 +92,9 @@
     &__list {
         text-align: left;
         width: 100%;
+        @media (max-width: 940px) {
+            text-align: center;
+        }
         &__list-item {
             border-top: 1px dashed $priceBoxContrast;
             // padding: 0 68px;
@@ -129,6 +132,7 @@
         border-right: none;
         border-top: 1px solid $contrastText;
         border-radius: 5px 0 0 5px;
+        color: $contrastText;
         flex-grow: 1;
         padding: 16px 20px;
         @media (max-width: 480px) {
@@ -136,6 +140,10 @@
             border-bottom: none;
             border-right: 1px solid $contrastText;
         }
+    &--dark {
+        background: $contrastText;
+        color: $textGrey;
+    }
     }
     &__button {
         border-radius: 0 5px 5px 0;
@@ -143,9 +151,60 @@
             border-radius: 0 0 5px 5px;
         }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         width: initial;
+    }
+    @media (max-width: 480px) {
         display: flex;
         flex-direction: column;
     }
+}
+
+
+// Placeholder text colors
+
+.light::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $contrastText;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.light::-moz-placeholder { /* Firefox 19+ */
+  color: $contrastText;
+  opacity: 1;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.light:-ms-input-placeholder { /* IE 10+ */
+  color: $contrastText;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.light:-moz-placeholder { /* Firefox 18- */
+  color: $contrastText;
+  opacity: 1;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+
+.dark::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $textGrey;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.dark::-moz-placeholder { /* Firefox 19+ */
+  color: $textGrey;
+  opacity: 1;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.dark:-ms-input-placeholder { /* IE 10+ */
+  color: $textGrey;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
+}
+.dark:-moz-placeholder { /* Firefox 18- */
+  color: $textGrey;
+  opacity: 1;
+  font-family: "Poppins", sans-serif;
+  @include fontSize(14);
 }

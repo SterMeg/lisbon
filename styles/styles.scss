@@ -141,9 +141,10 @@ a {
             margin: 0 auto;
         }
         &--half {
-            width: 50%;
-            @media (max-width: 768px) {
-                width: 100%;
+            justify-content: flex-start;
+            // width: 50%;
+            @media (max-width: 656px) {
+               justify-content: center;
             }
         }
     }
@@ -229,6 +230,14 @@ a {
     background: $contrastText;
     box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.04);
     padding: 34px;
+    @media (max-width: 940px) {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+        }
+    @media (max-width: 540px) {
+        width: initial;
+    }
     &__card {
         background: $priceBox;
         border: 1px solid $priceBoxContrast;
@@ -238,13 +247,20 @@ a {
         flex-grow: 1;
         flex-flow: column wrap;
         align-items: center;
+        @media (max-width: 940px) {
+            margin: 0 0 34px 0;
+        }
         .button {
             align-self: left;
-            margin-left: 68px;
+            margin: 38px 0 0 18%;
+            @media (max-width: 940px) {
+                align-self: center;
+                margin: 38px 0 0 0;
+            }
         }
-    @media (max-width: 940px) {
-        flex-direction: column;
-        }
+    .paragraph {
+        text-transform: capitalize;
+    }
     }
 }  
 
@@ -319,9 +335,9 @@ a {
 
 .article {
     &__image-container {
-        width: 12%;
+        flex-basis: 82px;
+        flex-shrink: 0;
         @media (max-width: 480px) {
-            width: initial;
             margin-bottom: 36px;
         }
         &__image {
@@ -437,9 +453,21 @@ a {
 }
 
 .list--sidebar--image {
-    // width: 10%;
+     flex-basis: 67px;
+     flex-shrink: 0;
+     margin-top: 14px;
+     @media (max-width: 656px) {
+         display: flex;
+         flex-basis: initial;
+         order: 1;
+         justify-content: center;
+     }
+    }   
     .list__item {
         margin-bottom: 28px;
+        @media (max-width: 656px) {
+            flex-basis: 67px;
+        }
         .img--round {
             @extend .article__image-container__image;
             &--noBorder {
@@ -447,10 +475,45 @@ a {
             }
         }
     }
-}
 
 .blockquote {
+    margin: 0;
     padding-left: 100px;
+    position: relative;
+    flex-basis: 550px;
+    @media (max-width: 656px) {
+        padding-left: 50px;
+    }
+    &__text--large {
+        font-family: "Raleway", sans-serif;
+        @include fontSize(30);
+        font-weight: 700;
+        line-height: 1.8;
+        margin: 0 0 28px 0;
+        color: $backgroundShaded;
+    }
+    .paragraph {
+        color: $blockquoteSm;
+        font-style: italic;
+        @include fontSize(17);
+    }
+    .author {
+        color: $contrastText;
+        font-style: normal;
+        @include fontSize(18);
+        font-weight: 600;
+    }
+    &::before {
+        content:"“";
+        @include fontSize(110);
+        font-family: "Poppins";
+        position: absolute;
+        left: 45px;
+        line-height: 1.2;
+        @media (max-width: 656px) {
+        left: 0;
+        }
+    }
 }
 
 .article-container {

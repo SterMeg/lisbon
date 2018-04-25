@@ -4,12 +4,18 @@
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     margin: 0 0 20px 0;
+    @media (max-width: 768px) {
+        @include fontSize(34);
+    }
 }
 
 .header-2 {
     @extend .header-1;
     @include fontSize(36);
     margin:0 0 20px 0;
+    @media (max-width: 768px) {
+        @include fontSize(26);
+    }
     &--small {
         @include fontSize(16);
     }
@@ -30,6 +36,10 @@
     @include fontSize(20);
     font-weight: 500;
     margin: 0;
+    &--large {
+        @include fontSize(24);
+        text-transform: capitalize;
+    }
 }
 
 .header-5 {
@@ -65,6 +75,8 @@
         align-items: baseline;
         justify-content: center;
         color: $textBlack;
+        margin: 34px 0;
+        text-transform: lowercase;
         &::before {
             content: "$";
             @include fontSize(26);
