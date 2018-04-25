@@ -6,8 +6,11 @@
     @include fontSize(15);
     &__logo {
         margin-bottom: 24px;
-        @media (max-width: 800px) {
-            width: 100;
+        // @media (max-width: 800px) {
+        //     width: 100;
+        // }
+        @media (max-width: 480px) {
+            margin-bottom: 10px;
         }
     }
     &__icon {
@@ -16,6 +19,9 @@
         margin-left: 15px;
         width: 44px;
         height: 44px; 
+        &:hover {
+            background: darken($pink, 10);
+        }
     }
     &__list {
         flex-flow: row wrap;
@@ -45,8 +51,11 @@
     @media (max-width: 768px) {
         overflow: hidden;
     }
+    @media (max-width: 480px) {
+        padding-top: 10px;
+    }
     @media (max-height: 600px) {
-        height: initial;
+        height: initial; //remove viewheight on short devices
     }
     &__nav {
         border-bottom: 1px solid rgba(255, 255, 255, 0.22);
@@ -102,6 +111,9 @@ input#hamburger-menu:checked + ul.nav__list {
     display: none;
     @media (max-width: 768px) {
         display: block;
+        &:hover {
+            color: $pink;
+        }
     }
 }
 

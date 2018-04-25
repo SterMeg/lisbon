@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lisbon</title>
+    <link type="image/png" href="images/favicon.png" rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400, 400i, 500, 800|Raleway:400,500,800" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
     <!-- HEADER BEGINS -->
     <header class="main-header">
         <div class="wrapper">
@@ -117,7 +119,7 @@
             </div><!-- /.wrapper -->
         </section>
         <!-- About Section -->
-        <section class="section">
+        <section id="maincontent" class="section">
             <div class="wrapper">
                 <header class="secondary-header">
                     <h2 id="about" class="header-2">About this event</h2>
@@ -296,7 +298,8 @@
                         </ul>
                         <a href="#" class="button">See details</a>
                     </div>
-                    <div class="card card-container__card">
+                    <div class="card card-container__card card-container__card--banner">
+                        <img class="banner" src="images/banner.png" alt="">
                         <header class="card__secondary-header">
                             <h4 class="header-4">Optimal Plan</h4>
                             <p class="paragraph">Standard pricing plan</p>

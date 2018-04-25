@@ -25,3 +25,7 @@ $counter: #333333;
     font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;
 }
+
+%flex {
+    display: flex;
+}
