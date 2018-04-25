@@ -1,90 +1,96 @@
-.footer__nav__list {
-    justify-content: center;
-}
-
 
 .footer {
-&__nav {
-    margin-bottom: 20px;
-    a {
-        color: $newsAuthor;
-        @include fontSize(14);
-        &:hover {
-            color: $contrastText;
+    //Footer Nav Styles
+    &__nav {
+        margin-bottom: 20px;
+        &__list {
+            justify-content: center;
         }
-    }
-}
-&__wrapper {
-    &--flex {
-        @extend %flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        @media (max-width: 950px) {
-             flex-wrap: wrap;
-             justify-content: center;
-         }
-         @media (max-width: 660px) {
-             flex-direction: column;
-             align-items: center;
-         }
-        }
-}    
-&__icon {
-    width: 58px;
-    height: 58px;
-    background: $footerSocial;
-    display: flex;
-    margin-right: 36px;
-    .image {
-        margin:auto;
-    }
-    @media (max-width: 660px) {
-        display: none;
-    }
-    
-}
-&__inner {
-    padding: 54px 0 40px 0;
-    &__container {
-        display: flex;
-        width: calc(100% / 3);
-        color: $newsAuthor;
-        @include fontSize(14);
-        justify-content: center;
-        align-items: center;
-        a:hover {
-            color: $contrastText;
-        }
-         @media (max-width: 890px) {
-             width: 50%;
-             margin-bottom: 34px;
-         }
-         @media (max-width: 660px) {
-             align-items: center;
-             justify-content: center;
-             text-align: center;
-         }
-        &:not(:last-child) {
-            border-right: 1px solid rgba(88, 88, 88, 0.58);
-            @media (max-width: 660px) {
-                border-right: none;
-                border-bottom: 1px solid rgba(88, 88, 88, 0.58);
-                padding-bottom: 14px;
-                margin-bottom: 14px;
+        a {
+            color: $newsAuthor;
+            @include fontSize(14);
+            &:hover {
+                color: $contrastText;
             }
         }
     }
+    //Footer wrapper
+    &__wrapper {
+        &--flex {
+            @extend %flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: 950px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @media (max-width: 660px) {
+                flex-direction: column;
+                align-items: center;
+            }
+            }
+    }    
+    //Footer Icon
+    &__icon {
+        width: 58px;
+        height: 58px;
+        background: $footerSocial;
+        display: flex;
+        margin-right: 36px;
+        .image {
+            margin:auto;
+        }
+        @media (max-width: 660px) {
+            display: none;
+        }
+        
+    }
+    // Footer contact containers
+    &__inner {
+        padding: 54px 0 40px 0;
+        &__container {
+            display: flex;
+            width: calc(100% / 3);
+            color: $newsAuthor;
+            @include fontSize(14);
+            justify-content: center;
+            align-items: center;
+            a:hover {
+                color: $contrastText;
+            }
+            @media (max-width: 890px) {
+                width: 50%;
+                margin-bottom: 34px;
+            }
+            @media (max-width: 660px) {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid rgba(88, 88, 88, 0.58);
+                @media (max-width: 660px) {
+                    border-right: none;
+                    border-bottom: 1px solid rgba(88, 88, 88, 0.58);
+                    padding-bottom: 14px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    //Top footer section color
     &--top {
         background: $footerBgTop;
     }
+    //Bottom footer section color;
     &--bottom {
         color: $contrastText;
-       background: $footerBgBottom; 
-       position: relative;
-       text-align: center;
-       .img--logo {
+        background: $footerBgBottom; 
+        position: relative;
+        text-align: center;
+        .img--logo {
            margin: 0 auto 20px;
        }
+       //Triangle element
        &::before {
             content: "";
             position: absolute;
@@ -96,19 +102,12 @@
             border-bottom: 30px solid $footerBgBottom;
             left: 50%;
             transform: translateX(-50%);
-       }
-    //    &::after {
-    //         content: "\f077";
-    //         color: white;
-    //         font-family: "FontAwesome";
-    //         @include fontSize(15);
-    //         position: absolute;
-    //         left: 50%;
-    //         top: 0;
-    //    } 
         }
     }
+    }
 }
+
+//Chevron icon for triangle element
 .chevron {
     position: absolute;
     left: 50%;
@@ -118,6 +117,7 @@
 
 }
 
+//Footer contact colors
 .links-container {
     &__link {
         display: block;
@@ -126,6 +126,7 @@
     }
 }
 
+//Copyright styles
 .copyright {
     border-top: 1px solid $footerBgTop;
     color: $contrastText;

@@ -165,8 +165,9 @@
                 <div class="section__inner section__inner--short">
                     <h2 class="header-2">Join our event</h2>
                     <p class="paragraph">Claritas est teiam processus dynamicus qul sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula</p>
-                    <form class="input-container" action="">
-                        <input type="email" class="input-container__input  light" placeholder="Your Email">
+                    <form class="input-container" action="POST">
+                        <label class="visuallyhidden access-email" for="email">Your Email</label>
+                        <input type="email" name="email" id="email" class="input-container__input  light" placeholder="Your Email">
                         <input type="submit" class="button input-container__button" value="Subscribe">
                     </form>
                 </div>
@@ -387,7 +388,7 @@
                         </article>
                         <article class="article article--flex">
                             <div class="article__image-container">
-                                <img src="images/schedule-2.png" alt="An older man with glasses and a strangly smug smile""A woman in a red shirt looking serious in front of blurry nature" class="image article__image-container__image">
+                                <img src="images/schedule-2.png" alt="An older man with glasses and a strangly smug smile" class="image article__image-container__image">
                             </div>
                             <div class="article__container">
                                 <h5 class="header-5">Seth Rollis<span class="header-5--light">11AM - 2:30PM</span></h5>
@@ -486,6 +487,7 @@
                 <div class="section__inner section__inner--short">
                     <h2 class="header-4 header-4--large">Sign up for our newsletter</h2>
                     <form action="" class="input-container">
+                        <label class="visuallyhidden access-email" for="email">Your Email</label>
                         <input type="email" class="input input-container__input dark input-container__input--dark" placeholder="Your email address">
                         <input type="submit" class="button input-container__button" value="Subscribe">
                     </form>

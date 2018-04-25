@@ -1,4 +1,78 @@
 
+.nav {
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    @include fontSize(15);
+    &__logo {
+        margin-bottom: 24px;
+        // @media (max-width: 800px) {
+        //     width: 100;
+        // }
+        @media (max-width: 480px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__icon {
+        background: $pink;
+        color: $contrastText;
+        margin-left: 15px;
+        width: 44px;
+        height: 44px; 
+        &:hover {
+            background: darken($pink, 10);
+        }
+    }
+    &__list {
+        flex-flow: row wrap;
+        flex-grow: 1;
+        justify-content: flex-end;
+        &__link {
+            color: $contrastText;
+            display: block;
+            letter-spacing: 1px;
+            padding: 15px;
+            text-transform: uppercase;
+            &:hover {
+                color: $newsAuthor;
+            }
+        }
+    }
+}
+
+.nav,
+.nav__list {
+    display: flex;
+}
+
+.secondary-header {
+    margin-bottom: 50px;
+    padding-bottom: 36px;
+    position: relative;
+    text-align: center;
+    &:after {
+        content: "";
+        border-bottom: $pink 1px solid; 
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 5%;
+    }
+    .header-3 {
+         color: $textGrey;
+    }
+    &--image {
+        color: $contrastText;
+        .header-3 {
+            color: $contrastText;
+        }
+    }
+    &--grid {
+        grid-column: 1 / span 3;
+    }
+}
+
 // Site buttons
 .button {
     background: $pink;
@@ -120,7 +194,41 @@
     }
 }
 
+// Card media queries
+@media (max-width: 768px) {
+    .card--half {
+        width: calc(50% - 17px);
+        margin-bottom: 34px; 
+        &:nth-child(2) {
+             margin: 0;
+        }
+        @media (max-width: 480px) {
+            width: initial;
+        &:nth-child(2) {
+            margin-bottom: 34px;
+        }
+       }
+    }
+    .card--flex {
+        display: flex;
+        .img {
+            width:calc(50% - 17px);
+            @media (max-width:480px) {
+                width:initial;
+            }
+        }
+        .card__text {
+            width: calc(50% + 17px);
+            padding-left: 56px;
+            @media (max-width:480px) {
+                width:initial;
+                padding-left: 22px;
+            }
+        }
+    }
+}
 
+// Input and submit styles
 .input-container {
     display: flex;
     margin: 38px auto 0;

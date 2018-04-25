@@ -1,49 +1,8 @@
-.nav {
-    align-items: center;
-    flex-flow: row;
-    justify-content: space-between;
-    font-family: 'Poppins', sans-serif;
-    @include fontSize(15);
-    &__logo {
-        margin-bottom: 24px;
-        // @media (max-width: 800px) {
-        //     width: 100;
-        // }
-        @media (max-width: 480px) {
-            margin-bottom: 10px;
-        }
-    }
-    &__icon {
-        background: $pink;
-        color: $contrastText;
-        margin-left: 15px;
-        width: 44px;
-        height: 44px; 
-        &:hover {
-            background: darken($pink, 10);
-        }
-    }
-    &__list {
-        flex-flow: row wrap;
-        flex-grow: 1;
-        justify-content: flex-end;
-        &__link {
-            color: $contrastText;
-            display: block;
-            letter-spacing: 1px;
-            padding: 15px;
-            text-transform: uppercase;
-            &:hover {
-                color: $newsAuthor;
-            }
-        }
-    }
-}
 
+//Main header styles
 .main-header {
     background-image: url(../images/main-image.png);
     background-size: cover;
-    // display: flex;
     height: 100vh;
     padding-top: 24px;
     color: #fff;
@@ -57,9 +16,16 @@
     @media (max-height: 600px) {
         height: initial; //remove viewheight on short devices
     }
+    .wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        height: inherit;
+    }
+    //Main header nav changes
     &__nav {
         border-bottom: 1px solid rgba(255, 255, 255, 0.22);
         position: relative;
+        // Hamburger menu styles at small sizes
         @media (max-width: 768px) {
             position: static;
         }
@@ -81,23 +47,22 @@
                 z-index: 1;
             }
         }
+        // Second border on bottom
         &::after {
             content: "";
             position: absolute;
             bottom: 2px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.22);
             width: 100%;
+            // Hide second border when hamburger menu appears
+            @media (max-width: 768px){
+                display: none;
+            }
         }
-    }
-    .wrapper {
-        display: flex;
-        flex-flow: column wrap;
-        height: inherit;
     }
 }
 
-
-
+// Toggle hamburger menu
 input#hamburger-menu {
     display: none;
 }
@@ -117,11 +82,7 @@ input#hamburger-menu:checked + ul.nav__list {
     }
 }
 
-.nav,
-.nav__list {
-    display: flex;
-}
-
+// Feature section
 .feature {
     display: flex;
     flex-flow: column wrap;
@@ -145,6 +106,7 @@ input#hamburger-menu:checked + ul.nav__list {
     }
 }
 
+// Scroll tabs on side
 .chevron-left,
 .chevron-right {
     color: $contrastText;
@@ -168,31 +130,4 @@ input#hamburger-menu:checked + ul.nav__list {
 
 .chevron-right {
     right: 0;
-}
-
-.secondary-header {
-    margin-bottom: 50px;
-    padding-bottom: 36px;
-    position: relative;
-    text-align: center;
-    &:after {
-        content: "";
-        border-bottom: $pink 1px solid; 
-        position: absolute;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 5%;
-    }
-    .header-3 {
-         color: $textGrey;
-    }
-    &--image {
-        color: $contrastText;
-        .header-3 {
-            color: $contrastText;
-        }
-    }
-    &--grid {
-        grid-column: 1 / span 3;
-    }
 }

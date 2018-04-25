@@ -179,7 +179,7 @@
 }
 
 
-
+// Pricing Section
 .card-container {
     background: $contrastText;
     box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.04);
@@ -236,6 +236,9 @@
     }
 }  
 
+// Event schedule section
+
+// photos sidebar
 .list--sidebar {
     align-self: center;
     width: 25%;
@@ -275,6 +278,7 @@
     }
 }
 
+// Events list
 .articles {
     padding-left: 100px;
     position: relative;
@@ -438,6 +442,7 @@
     }
 }
 
+//Quotes section
 .list--sidebar--image {
      flex-basis: 67px;
      flex-shrink: 0;
@@ -540,6 +545,7 @@
     }
 }
 
+// Card media queries
 @media (max-width: 768px) {
     .card--half {
         width: calc(50% - 17px);
